@@ -11,7 +11,8 @@ format shown in the presentation. However, like most of these examples, they can
 serve as useful guideposts when you design your own purpose-built mappers and
 reducers.
 
-# log_processor.rb
+# log_processor.rb and batching_example.rb
 
 Shows an example of a control plane for log processing jobs, that can support
-job batching.
+job batching. Includes an example of how this control plane might be called for
+a simple example job.
