@@ -16,3 +16,8 @@ reducers.
 Shows an example of a control plane for log processing jobs, that can support
 job batching. Includes an example of how this control plane might be called for
 a simple example job.
+
+# redshift_operations.rb
+
+Shows some Redshift cluster management operations, based on the pattern used in
+the presentation.
