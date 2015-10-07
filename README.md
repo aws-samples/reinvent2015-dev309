@@ -10,3 +10,8 @@ Elastic MapReduce clusters. They're made to work with a particular log file
 format shown in the presentation. However, like most of these examples, they can
 serve as useful guideposts when you design your own purpose-built mappers and
 reducers.
+
+# log_processor.rb
+
+Shows an example of a control plane for log processing jobs, that can support
+job batching.
