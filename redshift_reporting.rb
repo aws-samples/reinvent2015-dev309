@@ -76,4 +76,20 @@ class ExampleQueries
     puts "Query:\n#{statement}\n"
     @reporter.run_query(statement)
   end
+
+  def conversion_rate_yesterday
+    statement = "SELECT COUNT(DISTINCT SESSION_ID) AS TOTAL_SESSIONS,
+      (
+        SELECT COUNT(DISTINCT SESSION_ID)
+        FROM FACT_DAILY_REQUESTS
+        WHERE END_DATE = '2015-10-07'
+        AND REQUEST = 'POST /checkout'
+        AND RESPONSE_CODE = 200
+      ) AS CHECKOUT_SESSIONS
+      FROM FACT_DAILY_REQUESTS
+      WHERE END_DATE = '2015-10-07'
+      AND USERNAME != '-'"
+    puts "Query:\n#{statement}\n"
+    @reporter.run_query(statement)
+  end
 end
